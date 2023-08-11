@@ -1,0 +1,40 @@
+from snakemake.utils import min_version
+
+min_version("7.19.0")
+
+
+input_fastq="input/{sample}.fastq"
+samples,= glob_wildcards(input_fastq)
+
+#print(samples)
+#print(viewpoints)
+#print(vpcoors)
+
+include: "rules/converting.smk"
+include: "rules/VPaln.smk"
+include: "rules/VPalnStat.smk"
+include: "rules/filteringVPaln.smk"
+include: "rules/filterVPalnStat.smk"
+include: "rules/extractVPalnReadId.smk"
+include: "rules/extractVPalnReads.smk"
+include: "rules/Galn.smk"
+include: "rules/GalnStat.smk"
+include: "rules/filteringGaln.smk"
+include: "rules/filterGalnStat.smk"
+include: "rules/comparing.smk"
+include: "rules/extractGreadCoorU.smk"
+include: "rules/sortingGreadCoor.smk"
+include: "rules/bedToolsintersect.smk"
+include: "rules/convertingBedtoolOut.smk"
+include: "rules/convertingBedtoolOutStep2.smk"
+include: "rules/InteractGen.smk"
+include: "rules/InteractCorrection.smk"
+include: "rules/InteractFinal.smk"
+
+rule all:
+    input:
+        expand(rules.filterVPalnStat.output, sample=samples),
+        expand(rules.VPalnStat.output, sample=samples),
+        expand(rules.InteractFinal.output, sample=samples),
+        expand(rules.GalnStat.output, sample=samples),
+        expand(rules.filterGalnStat.output, sample=samples),
