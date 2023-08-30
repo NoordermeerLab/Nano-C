@@ -12,7 +12,7 @@ Nano-C bioinformatics pipeline allows the user to analyze ONT Direct-RNA sequenc
 Nano-C bioinformatics pipeline aligns the FASTQ files using BWA-MEM to a synthetic genome, consisting only of the different viewpoints used in a Nano-C run (for this study the viewpoint sequences were obtained from Mouse genome assembly GRCm38 (mm10), using the BEDTools suite). Aligned reads, containing the viewpoint, are filtered for high mapping quality score (MQ ≥ 50). In the second stage, those high-quality viewpoint containing reads are mapped to the entire mouse genome assembly GRCm38 (mm10) with repeats masked. Further, the individual mapping segments within viewpoint containing reads are filtered for mappings with quality scores over 25 (MQ ≥ 25), thereby mostly removing low-quality inter-chromosomal mappings. The individual segments from each read are then transformed into NlaIII fragments of the mouse genome by merging the read segments that fall in the same or nearby NlaIII fragments using a custom-made Perl script. The total number of multi-contacts within the reads is calculated from the NlaIII-transformed reads, and the multi-contact information is organized according to the UCSC Interact Track Format. The Nano-C bioinformatics pipeline generates UCSC Interact Tracks for each individual viewpoint, which can be uploaded directly to the UCSC genome browser for visualization. 
 Nano-C bioinformatics analysis is primarily performed by a mix of custom Perl scripts and several external tools, which are automated using snakemake.
 
-> *** Note that the documentation is still under construction. ***
+> Note that the documentation is still under construction.
 
 ## Software
 Here is the list of major external tools and software used in this pipeline.
