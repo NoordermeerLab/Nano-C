@@ -28,6 +28,7 @@ Here is the list of major external tools and software used in this pipeline.
 
 ## Installation
 The Nano-C bioinformatics pipeline has only been tested on Linux (Ubuntu 20.04), but it should also work on MacOS. Conda must be installed in order to run the Nano-C bioinformatics pipeline, following [these instructions](https://docs.conda.io/projects/conda/en/latest/user-guide/install/) will install conda. We suggest using Miniconda since it is lightweight and provides all the requirements for running the Nano-C bioinformatics pipeline.
+
 To get started, create the conda environment with the YAML file “environment_NanoC.yml. 
 ```
 conda env create -f environment_NanoC.yml
