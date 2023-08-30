@@ -47,6 +47,7 @@ Now the environment will be activated and ready to use.
 
 ## Usage
 
-Below an overview of the steps involved in the Nano-C bioinformatics pipeline is provided. _ Note that the two dotted section in the image is not currently included in the pipeline. These can be executed independently. These features will be included in the pipeline in the next release. see the 'Usage' for details _
+Below an overview of the steps involved in the Nano-C bioinformatics pipeline is provided. 
+> Note that the two dotted section in the image is not currently included in the pipeline. These can be executed independently. These features will be included in the pipeline in the next release. see the 'Usage' for details 
 
-![Pipeline](./Image/ Pipeline.png)
+![Pipeline](./Image/Pipeline.png)
