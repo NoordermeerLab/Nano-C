@@ -52,11 +52,14 @@ Now the environment will be activated and ready to use.
 Before starting to use the Nano-C bioinformatics pipeline, the directory ‘Snakemake_NanoC’ needs to be downloaded and placed inside the working directory. This ‘Snakemake_NanoC’ directory contains three subdirectories and one Snakefile.
 
 -	scripts 
+
 This subdirectory contains all the custom-made Perl scripts for the analysis.
 -	Rules
+
 This subdirectory contains all the snakemake rule files for the pipeline.
 -	Input
-This subdirectory currently contains two more subdirectories ** ViewpointSeq ** and ** maskedGenome **, for keeping the Mouse genome Fasta and BWA index files respectively. Along with the subdirectoriesm it also contains example input files (except big files i.e., Nano-C FastQ file, Mouse genome assembly Fasta file, BWA index files and genome wide NlaIII fragments file) required for the analysis.
+
+This subdirectory currently contains two more subdirectories ***ViewpointSeq*** and ***maskedGenome***, for keeping the Mouse genome Fasta and BWA index files respectively. Along with the subdirectoriesm it also contains example input files (except big files i.e., Nano-C FastQ file, Mouse genome assembly Fasta file, BWA index files and genome wide NlaIII fragments file) required for the analysis.
 
 ### Required input files
 1.	Nano-C FastQ file (merge FastQ file for single run)
@@ -66,6 +69,7 @@ This subdirectory currently contains two more subdirectories ** ViewpointSeq ** 
 5.	Mouse genome (mm10) chromosome size file
 6.	NlaIII fragment file for Mouse genome (mm10)
 7.	All the viewpoint location as a BED file
+
 The Nano-C bioinformatics pipeline can be executed as shown below assuming that all necessary input files, script files, and rule files are present at the appropriate location.
 
 ```
