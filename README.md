@@ -78,9 +78,14 @@ The Nano-C bioinformatics pipeline can be executed as shown below assuming that 
  snakemake --cores 1   #this will execute the Nano-C pipeline
 ```
 
+Successfully executing the Nano-C bioinformatics pipeline will generate a combined single interact file, containing the multi-contact interactions for each of the viewpoints used in the experiment. 
 
+Viewpoint-specific interact files can be created from the combined file either manually or using ***splitting_interact_file.pl*** script. Those individual viewpoint-specific files can be uploaded directly to the UCSC Genome Browser for visualization.
+
+![Pipeline](./Image/ Pipeline.png)
 
 Below an overview of the steps involved in the Nano-C bioinformatics pipeline is provided. 
-> Note that the two dotted section in the image is not currently included in the pipeline. These can be executed independently. These features will be included in the pipeline in the next release. see the 'Usage' for details 
+> Note that the two dotted sections in the image are not currently included in the pipeline. These can be executed independently. These features will be included in the pipeline in the next release. see 'Usage' for details _
+
 
 ![Pipeline](./Image/Pipeline.png)
