@@ -49,6 +49,33 @@ Now the environment will be activated and ready to use.
 
 ## Usage
 
+Before starting to use the Nano-C bioinformatics pipeline, the directory ‘Snakemake_NanoC’ needs to be downloaded and placed inside the working directory. This ‘Snakemake_NanoC’ directory contains three subdirectories and one Snakefile.
+
+-	scripts 
+This subdirectory contains all the custom-made Perl scripts for the analysis.
+-	Rules
+This subdirectory contains all the snakemake rule files for the pipeline.
+-	Input
+This subdirectory currently contains two more subdirectories ** ViewpointSeq ** and ** maskedGenome **, for keeping the Mouse genome Fasta and BWA index files respectively. Along with the subdirectoriesm it also contains example input files (except big files i.e., Nano-C FastQ file, Mouse genome assembly Fasta file, BWA index files and genome wide NlaIII fragments file) required for the analysis.
+
+### Required input files
+1.	Nano-C FastQ file (merge FastQ file for single run)
+2.	Viewpoint sequence file (we used mm10 genome)
+3.	Repeat masked Mouse genome (mm10) Fasta file
+4.	BWA index file for both Mouse genome and the Viewpoint sequence file
+5.	Mouse genome (mm10) chromosome size file
+6.	NlaIII fragment file for Mouse genome (mm10)
+7.	All the viewpoint location as a BED file
+The Nano-C bioinformatics pipeline can be executed as shown below assuming that all necessary input files, script files, and rule files are present at the appropriate location.
+
+```
+ snakemake -np			#this will dry-run the Nano-C pipeline 
+ snakemake --dag | dot -Tpdf > dagFinalTest1.pdf		#this will create a flow diagram of the Nano-C pipeline
+ snakemake --cores 1		#this will execute the Nano-C pipeline
+```
+
+
+
 Below an overview of the steps involved in the Nano-C bioinformatics pipeline is provided. 
 > Note that the two dotted section in the image is not currently included in the pipeline. These can be executed independently. These features will be included in the pipeline in the next release. see the 'Usage' for details 
 
