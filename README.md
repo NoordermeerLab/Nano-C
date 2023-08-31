@@ -73,9 +73,9 @@ This subdirectory currently contains two more subdirectories ***ViewpointSeq*** 
 The Nano-C bioinformatics pipeline can be executed as shown below assuming that all necessary input files, script files, and rule files are present at the appropriate location.
 
 ```ruby
- snakemake -np                                    #this will dry-run the Nano-C pipeline 
+ snakemake -np                                       #this will dry-run the Nano-C pipeline 
  snakemake --dag | dot -Tpdf > dagFinalTest1.pdf		#this will create a flow diagram of the Nano-C pipeline
- snakemake --cores 1		                            #this will execute the Nano-C pipeline
+ snakemake --cores 1		                               #this will execute the Nano-C pipeline
 ```
 
 
