@@ -30,19 +30,19 @@ Here is the list of major external tools and software used in this pipeline.
 The Nano-C bioinformatics pipeline has only been tested on Linux (Ubuntu 20.04), but it should also work on MacOS. Conda must be installed in order to run the Nano-C bioinformatics pipeline, following [these instructions](https://docs.conda.io/projects/conda/en/latest/user-guide/install/) will install conda. We suggest using Miniconda since it is lightweight and provides all the requirements for running the Nano-C bioinformatics pipeline.
 
 To get started, create the conda environment with the YAML file “environment_NanoC.yml. 
-```
+```ruby
 conda env create -f environment_NanoC.yml
 ````
 This will create the **snakemakeNanoC** environment with all the prerequisite tools and packages.
 
 Next, to check the environment:
-```
+```ruby
 conda info –envs
 ```
 This should show the newly created conda environment, along with the base and other (if created previously) environments. 
 
 To activate the environment:
-```
+```ruby
 conda activate snakemakeNanoC
 ```
 Now the environment will be activated and ready to use.
@@ -72,7 +72,7 @@ This subdirectory currently contains two more subdirectories ***ViewpointSeq*** 
 
 The Nano-C bioinformatics pipeline can be executed as shown below assuming that all necessary input files, script files, and rule files are present at the appropriate location.
 
-```python
+```ruby
  snakemake -np                                    #this will dry-run the Nano-C pipeline 
  snakemake --dag | dot -Tpdf > dagFinalTest1.pdf		#this will create a flow diagram of the Nano-C pipeline
  snakemake --cores 1		                            #this will execute the Nano-C pipeline
