@@ -85,6 +85,6 @@ Viewpoint-specific interact files can be created from the combined file either m
 ![ example_Interact](./Image/example_Interact.png)
 
 Below an overview of the steps involved in the Nano-C bioinformatics pipeline is provided. 
-> Note that the two dotted sections in the image are not currently included in the pipeline. These can be executed independently. These features will be included in the pipeline in the next release. see 'Usage' for details _
+> Note that the two dotted sections in the image are not currently included in the pipeline. These can be executed independently. These features will be included in the pipeline in the next release. see 'Usage' for details.
 
 ![Pipeline](./Image/Pipeline.png)
