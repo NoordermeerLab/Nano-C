@@ -34,6 +34,7 @@ To get started, create the conda environment with the YAML file “environment_N
 conda env create -f environment_NanoC.yml
 ````
 This will create the **snakemakeNanoC** environment with all the prerequisite tools and packages.
+
 Next, to check the environment:
 ```
 conda info –envs
